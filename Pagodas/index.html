@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pagodas</title>
+</head>
+<body>
+    <div class="menu_bar">
+      <img class="logo" src="Home/logo.png">
+
+      <div class="pagodiv" onmouseover="Shwe(this)" onmouseout="Shwe_out(this)">
+      
+        <h1 class="pagodaname">Shwe Zee Gon Pagoda</h1>
+        
+      </div>
+
+      <div class="pagodiv" onmouseover="Arnanda(this)" onmouseout="Arnanda_out(this)">
+      
+        <h1 class="pagodaname">Arnannda Temple</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Dhamayan(this)" onmouseout="Dhamayan_out(this)">
+      
+        <h1 class="pagodaname">Dhammayangyi Temple</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Lawka(this)" onmouseout="Lawka_out(this)">
+      
+        <h1 class="pagodaname">Lawkananda Pagoda</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Alodaw(this)" onmouseout="Alodaw_out(this)">
+      
+        <h1 class="pagodaname">Alodawpyi Pagoda</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Htilo(this)" onmouseout="Htilo_out(this)">
+      
+        <h1 class="pagodaname">Htilominlo Temple</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Gatot(this)" onmouseout="Gatot_out(this)">
+      
+        <h1 class="pagodaname">Gawdawpalin Temple</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Thatby(this)" onmouseout="Thatby_out(this)">
+      
+        <h1 class="pagodaname">Thatbtinnyu Temple</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Sula(this)" onmouseout="Sula_out(this)">
+      
+        <h1 class="pagodaname">Sulamani Temple</h1>
+       
+      </div>
+
+      <div class="pagodiv" onmouseover="Mya(this)" onmouseout="Mya_out(this)" >
+      
+        <h1 class="pagodaname">Myazedi Pagoda</h1>
+       
+      </div>
+
+
+      <div class="pagodiv" onmouseover="Buu(this)" onmouseout="Buu_out(this)">
+      
+        <h1 class="pagodaname">Bupaya Pagoda</h1>
+       
+      </div>
+
+      <div class="pagodiv">
+      
+        <h1 class="pagodaname">Arnannda Pagoda</h1>
+       
+      </div>
+
+      
+
+      <div class="pagodiv">
+      
+        <h1 class="pagodaname">Arnannda Pagoda</h1>
+       
+      </div>
+
+      <div class="pagodiv">
+      
+        <h1 class="pagodaname">End Pagoda</h1>
+       
+      </div>
+
+    </div>
+
+
+
+    <div class="pagodas">
+      <img src="SLide Mee.png"  id="image0">
+      <img src="org.png"  id="image">
+      <img src="Bye.png" id="image1">
+      <img src="Arnanda.png" id="image2">
+      <img src="Dhamanyan.png" id="image3">
+      <img src="Buu.png" id="image4">
+      <img src="Lawka.png" id="image5">
+      <img src="Alodaw.png" id="image6">
+      <img src="Htilo.png" id="image7">
+      <img src="gatot.png" id="image8">
+      <img src="Thatby.png" id="image9">
+      <img src="Sula.png" id="image10">
+      <img src="Mya.png" id="image11">
+      <h1  class="pgd" id="pgd"></h1>
+    </div>
+
+
+    
+
+    <div class="all">
+        <div class="lefter"  onclick="location.href='Home/Main.html'">
+           <div class="explainer"><span>Menu</span></div>
+          <div class="text">Home</div>
+        </div>
+        <div class="leftr">
+          <div class="text">Bagan</div>
+        </div>
+
+        <div class="left">
+          <div class="text">Pagodas</div>
+        </div>
+
+        <div class="center">
+          
+          <div class="text">Guide to Bagan</div>
+        </div>
+
+        <div class="centerr">
+          
+          <div class="text">Plans In Bagan</div>
+          </div>
+
+        <div class="right">
+          <div class="text">Hotels</div>
+        </div>
+        <div class="righter">
+          <div class="text">About Us</div>
+        </div>
+
+        </div>
+<
+
+
+<script>
+  function Shwe(x) {
+  document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image1').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Shwe Zee Gon Pagoda";
+  
+}
+  function Shwe_out(x) {
+   document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image1').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Arnanda(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image2').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Arnandar  Temple";
+}
+
+  function Arnanda_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image2').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Dhamayan(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image3').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Dhammayangyi Temple";
+}
+
+  function Dhamayan_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image3').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Lawka(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image5').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Lawkananda Pagoda";
+}
+
+  function Lawka_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image5').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Alodaw(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image6').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Alodawpyi Pagoda";
+}
+
+  function Alodaw_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image6').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Htilo(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image7').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Htilominlo Temple";
+}
+
+  function Htilo_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image7').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Gatot(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image8').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Gawdawpalin Temple";
+}
+
+  function Gatot_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image8').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Buu(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image4').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Bupaya Pagoda";
+}
+
+  function Buu_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image4').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Thatby(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image9').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Thatbtinnyu Temple";
+}
+
+  function Thatby_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image9').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Sula(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image10').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Sulamani Temple";
+}
+
+  function Sula_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image10').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+  function Mya(x) {
+    document.getElementById('image0').style.animation = "pagoda_in 1s forwards";
+  document.getElementById('image11').style.animation = "pagoda_in 3s forwards";
+  document.getElementById('pgd').innerHTML="Myazedi    Pagoda";
+}
+
+  function Mya_out(x) {
+    document.getElementById('image0').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('image11').style.animation = "pagoda_out 1s forwards";
+   document.getElementById('pgd').innerHTML="";
+  
+}
+
+</script>
+
+</body>
+</html>
