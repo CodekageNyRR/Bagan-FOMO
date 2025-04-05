@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Raleway", sans-serif;
+            background-image: url('pagoda_bg.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-position: center; /* Center the image */
+                      background-attachment: fixed;
+            display: flex;
+            justify-content: right;
+            align-items: top; 
+            font-weight: 300;
+          }
+          
+          .all {
+            z-index: 4;
+            display: grid;
+            perspective: 10px;
+            transform: perspective(300px) rotateX(0deg);
+            will-change: perspective;
+            perspective-origin: right top;
+            transition: all 1.3s ease-out;
+            justify-content: top;
+            transform-style: preserve-3d;
+              position: fixed;
+          
+            height: 100%; 
+          }
+          
+          .all:hover {
+            perspective: 10000px;
+            transition: all 1.3s ease-in;
+            transform: perspective(10000px) rotateX(0deg);
+          }
+          .all:hover .text {
+            opacity: 1;
+          }
+          .all:hover > div {
+            opacity: 1;
+            transition-delay: 0s;
+          }
+          .all:hover .explainer {
+            opacity: 0;
+          }
+          
+          .left, .center, .right, .lefter, .righter, .leftr, .centerr {
+            width: 120px;
+            height: 33px;
+            transform-style: preserve-3d;
+            border-radius: 10px;
+            border: 1px solid #fff;
+            box-shadow: 0 0 20px 5px rgba(100, 100, 255, 0.4);
+            opacity: 0;
+            transition: all 0.3s ease;
+            transition-delay: 1s;
+            position: relative;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: #F0E68C;
+            cursor: pointer;
+            
+          }
+          .left:hover, .center:hover, .right:hover, .lefter:hover, .righter:hover, .leftr:hover, .centerr:hover {
+            box-shadow: 0 0 30px 10px rgba(100, 100, 255, 0.6);
+            background-color: #FFD700;
+          }
+          
+          .text {
+            transform: translateY(30px);
+            opacity: 0;
+            padding-top: 15;
+            transition: all 0.3s ease;
+            bottom: 0;
+            left: 5px;
+            position: absolute;
+            will-change: transform;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
+          }
+          
+          .lefter {
+            opacity: 1;
+            background-image: url(home.png);
+          }
+          
+          .leftr {
+            transform: translateY(0px) translateZ(-50px) ;
+            background-image: url("bagan_logo.png");
+          }
+          
+          .left {
+            transform: translateY(0px) translateZ(-50px) ;
+            background-image: url("pagoda_logo.png");
+          }
+          
+          .center {
+            transform: translateY(10px) translateZ(-70px);
+            background-image: url(to_logo.png);
+          }
+          
+          .centerr {
+            transform: translateY(10px) translateZ(-70px);
+            background-image: url(in_logo.png);
+          }
+          
+          .right {
+            transform: translateY(20px) translateZ(-80px);
+            background-image: url(hotel_logo.png);
+          }
+          
+          .righter {
+            transform: translateY(30px) translateZ(-90px);
+            background-image: url(people_logo.png);
+          }
+          
+          .explainer {
+            
+            font-size: 1.3rem;
+            color: black;
+            transition: all 0.6s ease;
+            width: 100%;
+            height: 100%;
+           background: rgb(212,233,4);
+          background: radial-gradient(circle, rgba(212,233,4,1) 0%, rgba(255,215,0,1) 100%);
+            border-radius: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          
+          .logo{
+          position: absolute;
+          left: 10;
+              width: 100px;
+              top: 10;
+
+            
+          }
+          
+          
+        body {
+            font-family: Arial, sans-serif;
+            
+            padding: 20px;
+        }
+        .card {
+            width: 300px;
+            height: 350px;
+            perspective: 1000px;
+            border-color:  rgb(76, 175, 80, 0);
+            margin-bottom: 10px;
+            background: rgb(76, 175, 80, 0);
+            z-index: 5;
+            
+            
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            border-radius: 10px;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+            background-image: url('../Pagodas/org.png');
+        }
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+            
+        }
+        .card-front {
+            background-color: #fff;
+            color: #000;
+        }
+        .card-back {
+            background-color: #333;
+            color: #fff;
+            transform: rotateY(180deg);
+        }
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 16px;
+        }
+        .cover-photo {
+            width: 115%;
+            height: 500px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .profile-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 70%;
+            object-fit: cover;
+            position: absolute;
+            top: 170px;
+            left: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+            justify-content: center;
+        }
+        
+        .icon img {
+            width: 50px;
+            height: 50px;
+            transition: filter 0.3s ease, transform 0.3s ease;
+            border-radius: 50   ;
+            border-bottom: 20;
+            border-top: 20;
+        }
+        
+        .icon:hover img {
+            filter: brightness(1.5);
+            transform: scale(1.1);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="left-aligned">
+        <img class="logo" src="logo.png">
+  
+  </div>
+  
+  <div class="all">
+    <div class="lefter"  onclick="location.href='../Logout/Main.html'">
+       <div class="explainer"><span>Menu</span></div>
+      <div class="text">Home</div>
+    </div>
+    <div class="leftr" onclick="location.href='../Bagan/bagan.html'">
+      <div class="text">Bagan</div>
+    </div>
+
+    <div class="left" onclick="location.href='../Pagodas/index.html'">
+      <div class="text">Pagodas</div>
+    </div>
+
+    <div class="center" onclick="location.href='../Guide_To_Bagan/index.html'">
+      
+      <div class="text">Guide to Bagan</div>
+    </div>
+
+    <div class="centerr"  onclick="location.href='../Plan/index.html'">
+      
+      <div class="text">Plans In Bagan</div>
+      </div>
+
+    <div class="right" onclick="location.href='../Hotels/index.html'">
+      <div class="text">Hotels</div>
+    </div>
+    <div class="righter" onclick="location.href='../About us/index.html'">
+      <div class="text">About Us</div>
+    </div>
+
+    </div>
+  
+    <div class="container mt-5">
+        <div class="row g-4 justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="miit_pic.jpg" class="cover-photo" alt="Cover Photo 1">
+                            <img src="ktzt.jpg" class="profile-photo" alt="Profile Photo 1">
+                            <div class="text-center mt-4">
+                                <h5 class="card-title">Ma Khine Thazin Htun</h5>
+                                <p class="card-text">2019-MIIT-CSE-014</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="text-center">
+                                <p class="card-text">
+                                    🌟Front-End Developer
+                                </p>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                                        <img src="facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="tel:+95956026720" class="icon phone" title="Call Us">
+                                        <img src="telephone-logo.png" alt="Telephone">
+                                    </a>
+                                    <a href="https://t.me/gyinkaung05" target="_blank" class="icon telegram" title="Telegram">
+                                        <img src="telegram-logo.png" alt="Telegram">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="miit_pic.jpg" class="cover-photo" alt="Cover Photo 2">
+                            <img src="slm.jpg" class="profile-photo" alt="Profile Photo 2">
+                            <div class="text-center mt-4">
+                                <h5 class="card-title">Ma Su Lae Mon</h5>
+                                <p class="card-text">2019-MIIT-CSE-050</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="text-center">
+                                <p class="card-text">🌟Front-End Developer</p>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                                        <img src="facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="tel:+95956026720" class="icon phone" title="Call Us">
+                                        <img src="telephone-logo.png" alt="Telephone">
+                                    </a>
+                                    <a href="https://t.me/gyinkaung05" target="_blank" class="icon telegram" title="Telegram">
+                                        <img src="telegram-logo.png" alt="Telegram">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="miit_pic.jpg" class="cover-photo" alt="Cover Photo 3">
+                            <img src="IGM1.jpg" class="profile-photo" alt="Profile Photo 3">
+                            <div class="text-center mt-4">
+                                <h5 class="card-title">Ma Ingyin May</h5>
+                                <p class="card-text">2022-MIIT-CSE-016</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="text-center">
+                                <p class="card-text">🌟Front-End Developer</p>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                                        <img src="facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="tel:+95956026720" class="icon phone" title="Call Us">
+                                        <img src="telephone-logo.png" alt="Telephone">
+                                    </a>
+                                    <a href="https://t.me/gyinkaung05" target="_blank" class="icon telegram" title="Telegram">
+                                        <img src="telegram-logo.png" alt="Telegram">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="miit_pic.jpg" class="cover-photo" alt="Cover Photo 4">
+                            <img src="pmt.jpg" class="profile-photo" alt="Profile Photo 4">
+                            <div class="text-center mt-4">
+                                <h5 class="card-title">Mg Pai Min Thway</h5>
+                                <p class="card-text">2022-MIIT-CSE-002</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="text-center">
+                                <p class="card-text">🌟Front-End Developer</p>
+                               <div class="social-icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                                        <img src="facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="tel:+95956026720" class="icon phone" title="Call Us">
+                                        <img src="telephone-logo.png" alt="Telephone">
+                                    </a>
+                                    <a href="https://t.me/gyinkaung05" target="_blank" class="icon telegram" title="Telegram">
+                                        <img src="telegram-logo.png" alt="Telegram">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="miit_pic.jpg" class="cover-photo" alt="Cover Photo 5">
+                            <img src="nyrr.jpg" class="profile-photo" alt="Profile Photo 5">
+                            <div class="text-center mt-4">
+                                <h5 class="card-title">Mg Khant Nyar Thwin</h5>
+                                <p class="card-text">2022-MIIT-CSE-018</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="text-center">
+                                <p class="card-text">🌟Front-End Developer</p>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                                        <img src="facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="tel:+95956026720" class="icon phone" title="Call Us">
+                                        <img src="telephone-logo.png" alt="Telephone">
+                                    </a>
+                                    <a href="https://t.me/gyinkaung05" target="_blank" class="icon telegram" title="Telegram">
+                                        <img src="telegram-logo.png" alt="Telegram">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Card 6-->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="miit_pic.jpg" class="cover-photo" alt="Cover Photo 5">
+                            <img src="wpa.jpg" class="profile-photo" alt="Profile Photo 5">
+                            <div class="text-center mt-4">
+                                <h5 class="card-title">Mg Wai Phyo Aung</h5>
+                                <p class="card-text">2022-MIIT-CSE-019</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="text-center">
+                                <p class="card-text">🌟Front-End Developer</p>
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                                        <img src="facebook-logo.png" alt="Facebook">
+                                    </a>
+                                    <a href="tel:+95956026720" class="icon phone" title="Call Us">
+                                        <img src="telephone-logo.png" alt="Telephone">
+                                    </a>
+                                    <a href="https://t.me/gyinkaung05" target="_blank" class="icon telegram" title="Telegram">
+                                        <img src="telegram-logo.png" alt="Telegram">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="miit_pic.jpg" class="cover-photo" alt="Cover Photo 6">
+                            <img src="kkz.jpg" class="profile-photo" alt="Profile Photo 6">
+                            <div class="text-center mt-4">
+                                <h5 class="card-title">Mg Kaung Khant Zaw</h5>
+                                <p class="card-text">2019-MIIT-CSE-010</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="text-center">
+                                <p class="card-text">🌟Front-End Developer</p>
+                            </div>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com" target="_blank" class="icon facebook" title="Facebook">
+                                    <img src="facebook-logo.png" alt="Facebook">
+                                </a>
+                                <a href="tel:+95956026720" class="icon phone" title="Call Us">
+                                    <img src="telephone-logo.png" alt="Telephone">
+                                </a>
+                                <a href="https://t.me/gyinkaung05" target="_blank" class="icon telegram" title="Telegram">
+                                    <img src="telegram-logo.png" alt="Telegram">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
